@@ -3,7 +3,7 @@
 // var WxApiRoot = 'http://localhost:8070/demo/wx/';
 // var WxApiRoot = 'http://localhost:8080/wx/';
 // 测试环境部署api地址
-var WxApiRoot = 'https://www.songmingjj.com/demo/wx/';
+var WxApiRoot = 'https://www.songmingjj.cn/demo/wx/';
 // 线上云平台api地址
 //var WxApiRoot = 'https://www.dtsshop.com/wx/';
 

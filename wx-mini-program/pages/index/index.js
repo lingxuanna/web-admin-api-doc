@@ -29,7 +29,7 @@ Page({
     if (userInfo){
       shareUserId = userInfo.userId;
     }
-    console.log('/pages/index/index?shareUserId=' + shareUserId);
+    // console.log('/pages/index/index?shareUserId=' + shareUserId);
     return {
       title: '聚惠星',
       desc: '长沙市聚惠星科技与您共约',
@@ -46,7 +46,7 @@ Page({
 
   getIndexData: function() {
     let that = this;
-    console.log("----------"+api.IndexUrl)
+    // console.log("----------"+api.IndexUrl)
     util.request(api.IndexUrl).then(function(res) {
       if (res.errno === 0) {
         that.setData({
@@ -82,7 +82,7 @@ Page({
     if (options.scene) {
       //这个scene的值存在则证明首页的开启来源于朋友圈分享的图,同时可以通过获取到的goodId的值跳转导航到对应的详情页
       var scene = decodeURIComponent(options.scene);
-      console.log("scene:" + scene);
+      // console.log("scene:" + scene);
 
       let info_arr = [];
       info_arr = scene.split(',');

@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "首页",
+  "navigationBarTitleText": "嵩明凌轩宇家教机构",
   "usingComponents": {
     "zan-capsule": "../../lib/zanui-weapp/capsule/index",
     "coupon-window": "../../lib/coupon-window/index",

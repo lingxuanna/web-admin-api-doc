@@ -20,8 +20,8 @@ Page({
     cartGoodsCount: 0,
     userHasCollect: 0,
     number: 1,
-    checkedSpecText: '规格数量选择',
-    tmpSpecText: '请选择规格数量',
+    checkedSpecText: '家教课时选择',
+    tmpSpecText: '请选择家教课时',
     checkedSpecPrice: 0,
     openAttr: false,
     openShare: false,
@@ -367,7 +367,7 @@ Page({
       });
     } else {
       this.setData({
-        tmpSpecText: '请选择规格数量'
+        tmpSpecText: '请选择家教课时'
       });
     }
 
@@ -401,7 +401,7 @@ Page({
 
     } else {
       this.setData({
-        checkedSpecText: '规格数量选择',
+        checkedSpecText: '家教课时选择',
         checkedSpecPrice: this.data.goods.retailPrice,
         soldout: false
       });

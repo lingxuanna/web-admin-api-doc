@@ -58,21 +58,21 @@
     <view class="b" style="width:100%;">
       <view style="border-bottom:solid 1rpx #ccc;padding:20rpx;">
         <navigator url="/pages/student/stuInfo?id={{item.id}}"  style="margin-top:10rpx;">
-          <view style="width:100%;">
+          <view style="width:100%;margin-bottom:15rpx;">
             <text style="margin-left:20rpx;">编号：001</text>
             <text style="margin-left:30rpx;">男</text>
             <text style="margin-left:30rpx;">提高型</text>
             <text style="display:inline-block;position:absolute;right:30rpx;">发布时间：2020-10-10</text>
           </view>
-          <view>
+          <view style="width:100%;margin-bottom:15rpx;">
             <text style="margin-left:20rpx;">求教科目：</text>
             <text style="margin-left:30rpx;">一年级 数学</text>
           </view>
-          <view>
+          <view style="width:100%;margin-bottom:15rpx;">
             <text style="margin-left:20rpx;">授课区域：</text>
             <text style="margin-left:30rpx;">嵩明县小街镇</text>
           </view>
-          <view>
+          <view style="width:100%;margin-bottom:15rpx;">
             <text style="margin-left:20rpx;">课时费用：</text>
             <text style="margin-left:30rpx;">面议</text>
             <text style="display:inline-block;position:absolute;right:30rpx;">可预约</text>

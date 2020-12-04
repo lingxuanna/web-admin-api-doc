@@ -1,9 +1,8 @@
 {
   "pages": [
-    "pages/catalog/catalog",
     "pages/index/index",
+    "pages/catalog/catalog",
     "pages/student/stuInfo",
-    
     "pages/newGoods/newGoods",
     "pages/hotGoods/hotGoods",
     "pages/ucenter/index/index",
@@ -81,7 +80,7 @@
         "pagePath": "pages/cart/cart",
         "iconPath": "static/images/cart.png",
         "selectedIconPath": "static/images/cart@selected.png",
-        "text": "家教订单"
+        "text": "购物车"
       },
       {
         "pagePath": "pages/ucenter/index/index",

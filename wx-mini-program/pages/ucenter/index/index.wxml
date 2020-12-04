@@ -37,7 +37,7 @@
       </view>
       <view class='myOrder'>
         <view class='title acea-row row-between-wrapper'>
-           <view class='jhx_f4'>我的订单</view>
+           <view class='jhx_f4'>我的家教订单</view>
            <view class='allOrder jhx_f6' hover-class='none' bindtap='goOrder'>全部订单<text class='iconfont icon-jiantou'></text></view>
         </view>
         <view class='orderState acea-row row-middle'>
@@ -53,14 +53,14 @@
                 <text class="item_badge" wx:if="{{order.unship != 0}}">{{order.unship}}</text>
                 <image src='/static/images/dfh.png'></image>
               </view>
-              <view class='jhx_f2'>待发货</view>
+              <view class='jhx_f2'>待安排</view>
            </view>
             <view class='item' hover-class='none'  bindtap='goOrderIndex' data-index='3' data-route='/pages/ucenter/order/order'>
               <view class='pictrue'>
               <text class="item_badge" wx:if="{{order.unrecv != 0}}">{{order.unrecv}}</text>
               <image src='/static/images/dsh.png'></image>
               </view>
-              <view class='jhx_f2'>待收货</view>
+              <view class='jhx_f2'>待授课</view>
            </view>
             <view class='item' hover-class='none'  bindtap='goOrderIndex' data-index='4' data-route='/pages/ucenter/order/order'>
               <view class='pictrue'>
@@ -76,9 +76,8 @@
         </view>
       </view>
       <view class='myService'>
-         <view class='title acea-row row-middle jhx_f4'>我的服务</view>
          <view class='serviceList acea-row row-middle'>
-            <view class='item' wx:for="{{MyMenus}}" wx:key bindtap='goPages' data-url='{{item.url}}' wx:if="{{item.url!='#'}}">
+            <view class='item' wx:for="{{MyMenus}}" wx:key='k' bindtap='goPages' data-url='{{item.url}}' wx:if="{{item.url!='#'}}">
               <view class='pictrue'><image src='/static/images/{{item.pic}}'></image></view>
               <view class='jhx_f2'>{{item.name}}</view>
             </view>
@@ -88,6 +87,8 @@
             </button>
          </view>
       </view>
+
+
    </view>
 </view>
 <authorize bind:onLoadFun='onLoadFun'></authorize>

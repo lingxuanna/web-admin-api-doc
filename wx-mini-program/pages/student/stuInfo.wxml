@@ -1,0 +1,82 @@
+<view class="container">
+  <!-- 分享 -->
+  <view class="goods-attr">
+    <view class="t jhx_f4" style="text-align:center;">学员订单信息</view>
+    <view class="l">
+      <!-- class=item -->
+      <view class="item" style="border-bottom:dotted 3rpx #ccc;">
+        <text class="left" style="width:140rpx;">编号：</text>
+        <text class="right">s001</text>
+      </view>
+      <view class="item" style="border-bottom:dotted 1rpx #ccc;">
+        <text class="left" style="width:140rpx;">姓名：</text>
+        <text class="right">李同学</text>
+      </view>
+      <view class="item" style="border-bottom:dotted 1rpx #ccc;">
+        <text class="left" style="width:140rpx;">性别：</text>
+        <text class="right">男</text>
+      </view>
+      <view class="item" style="border-bottom:dotted 1rpx #ccc;">
+        <text class="left"  style="width:140rpx;">学员年级：</text>
+        <text class="right">一年级</text>
+      </view>
+      <view class="item" style="border-bottom:dotted 1rpx #ccc;">
+        <text class="left" style="width:140rpx;">学习情况：</text>
+        <text class="right">基础薄弱型</text>
+      </view>
+    </view>
+     <view class="item" style="border-bottom:dotted 1rpx #ccc;">
+        <text class="left" style="width:140rpx;">学员位置：</text>
+        <text class="right">嵩明县小街镇</text>
+      </view>
+      <view class="item" style="border-bottom:dotted 1rpx #ccc;">
+        <text class="left" style="width:140rpx;">教员要求：</text>
+        <text class="right">男老师，有授课经验，能够提高学习成绩</text>
+      </view>  
+      <view class="item" style="border-bottom:dotted 1rpx #ccc;">
+        <text class="left" style="width:140rpx;">课时费用：</text>
+        <text class="right">面议</text>
+      </view>
+  </view>
+
+  <view class="goods-attr">
+    <view class="t jhx_f4" style="text-align:center;">预约该学员教师</view>
+    <view class="l">
+      <!-- class=item -->
+      <view class="item" style="border-bottom:solid 3rpx #ccc;">
+        <text class="left" style="width:20%;text-align:left;">t001</text>
+        <text class="left" style="width:20%;text-align:center;">李老师</text>
+        <text class="right" style="width:24%;text-align:center;">英语</text>
+        <text class="right" style="width:20%;text-align:center;">34单</text>
+      </view>
+      <view class="item" style="border-bottom:solid 3rpx #ccc;">
+        <text class="left" style="width:20%;text-align:left;">t002</text>
+        <text class="left" style="width:20%;text-align:center;">张老师</text>
+        <text class="right" style="width:24%;text-align:center;">数学</text>
+        <text class="right" style="width:20%;text-align:center;">12单</text>
+      </view>
+      <view class="item" style="border-bottom:solid 3rpx #ccc;">
+        <text class="left" style="width:20%;text-align:left;">t011</text>
+        <text class="left" style="width:20%;text-align:center;">网老师</text>
+        <text class="right" style="width:24%;text-align:center;">英语</text>
+        <text class="right" style="width:20%;text-align:center;">34单</text>
+      </view>
+      <view class="item" style="border-bottom:solid 3rpx #ccc;">
+        <text class="left" style="width:20%;text-align:left;">t001</text>
+        <text class="left" style="width:20%;text-align:center;">李老师</text>
+        <text class="right" style="width:24%;text-align:center;">英语</text>
+        <text class="right" style="width:20%;text-align:center;">34单</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 联系客服 -->
+<button class='contact' type="default-dark" session-from="weapp" size="27" send-message-title="{{goods.name}}" send-message-img="{{goods.gallery[0]}}" show-message-card="true" send-message-path="/pages/index/index?goodId={{goods.id}}"  open-type='contact' plain>
+</button>
+
+<!-- 底部按钮 -->
+<view class="bottom-btn">
+  <view class="c" bindtap="addFast" wx:if="{{!soldout}}">{{isGroupon?'点击预约学员':'点击预约学员'}}</view>
+  <view class="n" wx:if="{{soldout}}">该教师已无课时</view>
+</view>

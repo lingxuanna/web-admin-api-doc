@@ -22,19 +22,19 @@ Page({
     openSelectRegion: false,
     selectRegionList: [{
         id: 0,
-        name: '省份',
+        name: '县区',
         pid: 1,
         type: 1
       },
       {
         id: 0,
-        name: '城市',
+        name: '乡镇',
         pid: 1,
         type: 2
       },
       {
         id: 0,
-        name: '区县',
+        name: '社区/村',
         pid: 1,
         type: 3
       }
@@ -128,19 +128,19 @@ Page({
       this.setData({
         selectRegionList: [{
             id: 0,
-            name: '省份',
+            name: '县区',
             pid: 0,
             type: 1
           },
           {
             id: 0,
-            name: '城市',
+            name: '乡镇',
             pid: 0,
             type: 2
           },
           {
             id: 0,
-            name: '区县',
+            name: '社区/村',
             pid: 0,
             type: 3
           }
@@ -212,7 +212,7 @@ Page({
     selectRegionList.map((item, index) => {
       if (index > regionType - 1) {
         item.id = 0;
-        item.name = index == 1 ? '城市' : '区县';
+        item.name = index == 1 ? '乡镇' : '社区/村';
         item.pid = 0;
       }
       return item;

@@ -12,12 +12,12 @@ Page({
   data: {
     load_statue: true,
     shopInfo: {
-      name: '聚惠星',
-      address: 'https://gitee.com/qiguliuxing/dts-shop',
-      latitude: 27.4871724214,
-      longitude: 110.8950504844,
-      linkPhone: '19908488612',
-      qqNumber: '686432822'
+      name: '嵩明凌轩宇家教培训机构',
+      address: 'http://www.songmingjj.com',
+      latitude: 25.33986,
+      longitude: 103.03729,
+      linkPhone: '18987156734',
+      qqNumber: '1451717366@qq.com'
     },
   },
 

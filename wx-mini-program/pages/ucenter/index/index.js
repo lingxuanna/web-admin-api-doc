@@ -18,13 +18,13 @@ Page({
         uncomment: 0
       },
     MyMenus: [
-      { url: "/pages/ucenter/collect/collect", pic:"icon_collect.png",name:"商品收藏"},
+      { url: "/pages/ucenter/collect/collect", pic:"icon_collect.png",name:"收藏教师"},
       { url: "/pages/ucenter/footprint/footprint", pic: "footprint.png", name: "浏览足迹" },
-      { url: "/pages/groupon/myGroupon/myGroupon", pic: "group.png", name: "我的拼团" },
+      { url: "/pages/groupon/myGroupon/myGroupon", pic: "group.png", name: "拼团课程" },
       { url: "/pages/ucenter/address/address", pic: "address.png", name: "地址管理" },
       { url: "/pages/ucenter/feedback/feedback", pic: "feedback.png", name: "意见反馈" },
-      { url: "/pages/about/about", pic: "about_us.png", name: "关于我们" }
-      // *,{ url: "/pages/about/about", pic: "comment.png", name: "使用帮助" }
+      { url: "/pages/about/about", pic: "about_us.png", name: "机构位置" }
+      // { url: "/pages/about/about", pic: "comment.png", name: "使用帮助" }
       ],
       hasLogin: false,
       totalAmount: 0.00

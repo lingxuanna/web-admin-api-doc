@@ -1,7 +1,9 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/catalog/catalog",
+    "pages/index/index",
+    "pages/student/stuInfo",
+    
     "pages/newGoods/newGoods",
     "pages/hotGoods/hotGoods",
     "pages/ucenter/index/index",

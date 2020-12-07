@@ -20,7 +20,7 @@
          <view class='item' hover-class='none' wx:else>
             <view class='title'>用户类型</view>
             <view class='text'><text class='iconfont icon-jingyanzhi' style="color:#FF654B;margin-right:8rpx;"></text>
-            {{userInfo.userLevelDesc || "普通会员"}}</view>
+            {{userInfo.userLevelDesc || "未知"}}</view>
          </view>
          <view class='item' hover-class='none' wx:if="{{userInfo.userLevel==2}}" bindtap="goBrokerage">
             <view class='title'>总收益</view>
@@ -37,7 +37,7 @@
       </view>
       <view class='myOrder'>
         <view class='title acea-row row-between-wrapper'>
-           <view class='jhx_f4'>我的家教订单</view>
+           <view class='jhx_f4'>家长功能</view>
            <view class='allOrder jhx_f6' hover-class='none' bindtap='goOrder'>全部订单<text class='iconfont icon-jiantou'></text></view>
         </view>
         <view class='orderState acea-row row-middle'>
@@ -53,14 +53,14 @@
                 <text class="item_badge" wx:if="{{order.unship != 0}}">{{order.unship}}</text>
                 <image src='/static/images/dfh.png'></image>
               </view>
-              <view class='jhx_f2'>待安排</view>
+              <view class='jhx_f2'>安排中</view>
            </view>
             <view class='item' hover-class='none'  bindtap='goOrderIndex' data-index='3' data-route='/pages/ucenter/order/order'>
               <view class='pictrue'>
               <text class="item_badge" wx:if="{{order.unrecv != 0}}">{{order.unrecv}}</text>
               <image src='/static/images/dsh.png'></image>
               </view>
-              <view class='jhx_f2'>待授课</view>
+              <view class='jhx_f2'>授课中</view>
            </view>
             <view class='item' hover-class='none'  bindtap='goOrderIndex' data-index='4' data-route='/pages/ucenter/order/order'>
               <view class='pictrue'>
@@ -88,6 +88,34 @@
          </view>
       </view>
 
+    <view class='myService'>
+         <view class='title acea-row row-between-wrapper'>
+           <view class='jhx_f4'>教师功能</view>
+           <view class='allOrder jhx_f6' hover-class='none' bindtap='goOrder'>全部订单<text class='iconfont icon-jiantou'></text></view>
+         </view>
+
+         <view class='serviceList acea-row row-middle'>
+            <button class='item' hover-class='none'>
+              <view class='pictrue'><image src='/static/images/address.png'></image></view>
+              <view class='jhx_f2'>教师认证</view>
+            </button>
+
+            <button class='item' hover-class='none'>
+              <view class='pictrue'><image src='/static/images/footprint.png'></image></view>
+              <view class='jhx_f2'>展示信息</view>
+            </button>
+
+            <button class='item' hover-class='none'>
+               <view class='pictrue'><image src='/static/images/feedback.png'></image></view>
+               <view bindtap='goPages' data-url='/pages/comment/comment?valueId={{userInfo.goodsSn}}&type=0'  class='jhx_f2'>接单信息</view>
+            </button>
+
+            <view class='item'  hover-class='none'>
+               <view class='pictrue'><image src='/static/images/icon_collect.png'></image></view>
+               <view bindtap='goPages' data-url='/pages/comment/comment?valueId={{userInfo.goodsSn}}&type=0' class='jhx_f2'>学生评价</view>
+            </view>
+         </view>
+      </view>
 
    </view>
 </view>

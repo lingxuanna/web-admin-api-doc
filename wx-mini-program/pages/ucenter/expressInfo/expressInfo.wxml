@@ -19,9 +19,9 @@
           <view class='expressRecord-top'>
             <view class='getAddress-icon unfinish' wx:if="{{state != 3}}"></view>
             <view class='getAddress-icon finish' wx:if="{{state == 3}}"></view>
-            <view class='getAddress-text' wx:if="{{state == 2}}">运输中</view>
-            <view class='getAddress-text' wx:if="{{state == 3}}">已签收</view>
-            <view class='getAddress-text' wx:if="{{state == 4}}">快递如有疑问请联系客服</view>
+            <view class='getAddress-text' wx:if="{{state == 2}}">安排中</view>
+            <view class='getAddress-text' wx:if="{{state == 3}}">已安排</view>
+            <view class='getAddress-text' wx:if="{{state == 4}}">如有疑问请联系客服</view>
           </view>
       </view>
 

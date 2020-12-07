@@ -113,3 +113,4 @@
 </view>
 <coupon-window window='{{window}}' couponList="{{coupon}}" bind:onColse="onColse"></coupon-window>
 
+

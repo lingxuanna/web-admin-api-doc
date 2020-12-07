@@ -1,6 +1,6 @@
 <view class="container">
   <view class="login-box">
-    <button type="primary" open-type="getUserInfo" class="wx-login-btn" bindgetuserinfo="wxLogin">学生家长微信登录入口</button>
+    <!-- <button type="primary" open-type="getUserInfo" class="wx-login-btn" bindgetuserinfo="wxLogin">学生家长微信登录入口</button> -->
     <button type="primary" open-type="getUserInfo" class="wx-login-btn" bindgetuserinfo="wxLogin">机构教师微信登录入口</button>
     <button type="primary" class="account-login-btn" bindtap="accountLogin">账号登录</button>
   </view>

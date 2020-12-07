@@ -9,15 +9,14 @@
   <scroll-view scroll-y="true" scroll-top="{{scrollTop}}" style="height:{{scrollHeight}};">
 
     <view class="cate-item">
-      <!-- <view class="h">
-        <text class="name">{{currentCategory.name}}</text>
-        <text class="desc">{{currentCategory.frontName}}</text>
-      </view> -->
       <view class="b">
         <navigator class="item {{(iindex + 1) % 2 == 0 ? 'item-b' : ''}}" url="/pages/goods/goods?id={{iitem.id}}" wx:for="{{goodsList}}" wx:key="id" wx:for-item="iitem" wx:for-index="iindex">
           <image class="img" src="{{iitem.picUrl}}" background-size="cover"></image>
-          <text class="name jhx_f2">{{iitem.name}}</text>
-          <text class="price jhx_f8">￥{{iitem.retailPrice}}</text>
+          <text class="name jhx_f1" space="ensp">T{{iitem.goodsSn}}  {{iitem.name}}  {{iitem.keywords}}</text>
+          <view>
+            <text space="ensp" class="jhx_f8" style="color:red;font-weight:bolder;">￥{{iitem.retailPrice}}元/{{iitem.unit}}   </text>
+            <text class=" jhx_f2">{{12}}人预约</text>
+          </view>
         </navigator>
       </view>
     </view>

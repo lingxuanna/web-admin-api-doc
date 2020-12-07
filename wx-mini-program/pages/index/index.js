@@ -46,8 +46,8 @@ Page({
 
   getIndexData: function() {
     let that = this;
-    // console.log("----------"+api.IndexUrl)
     util.request(api.IndexUrl).then(function(res) {
+      console.log(res.data.hotGoodsList)
       if (res.errno === 0) {
         that.setData({
           newGoods: res.data.newGoodsList,

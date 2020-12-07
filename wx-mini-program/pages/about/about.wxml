@@ -47,8 +47,6 @@
 
   <view class="about-item">
     <view class="item-left">
-      <label class="jhx_f12">开源协议: </label>
-       <text>MIT</text> 
     </view>
   </view>
 

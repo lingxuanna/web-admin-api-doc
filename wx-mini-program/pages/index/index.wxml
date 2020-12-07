@@ -1,11 +1,13 @@
 <!--index.wxml-->
 <view class="container">
+<!-- 搜索框 -->
  <view class="search">
     <navigator url="/pages/search/search" class="input jhx_bg1">
       <image class="icon"></image>
       <text class="txt jhx_f1">教师搜索, 共{{goodsCount}}位教师供您选择...</text>
     </navigator>
   </view>
+  <!-- 轮播图片 -->
   <swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
     <swiper-item wx:for="{{banner}}" wx:key="id">
        <navigator url="{{item.link}}"> 
@@ -13,6 +15,7 @@
        </navigator> 
     </swiper-item>
   </swiper>
+  <!-- 信息公告 -->
   <view class='news acea-row row-between-wrapper'>
        <view class='pictrue'><image src='/static/images/news.png'></image></view>
        <view class='swiperTxt'>
@@ -32,7 +35,7 @@
        </view>
     </view>
 
-
+<!-- 导航课程 -->
     <view class="m-menu jhx_bg0">
     <navigator hover-class="none" class="item" url="/pages/category/category?id={{item.id}}" wx:for="{{channel}}" wx:key="id">
       <image src="{{item.iconUrl}}" background-size="cover"></image>
@@ -89,16 +92,17 @@
             <navigator class='more jhx_f6' hover-class="none" url='../hotGoods/hotGoods'>更多<text class="iconfont icon-jiantou"></text></navigator>
           </view>
     </view>
-       
+<!-- 教师推荐列表 -->
     <view class="b">
       <view class="item" wx:for="{{hotGoods}}" wx:for-index="index" wx:for-item="item" wx:key="id">
         <navigator url="/pages/goods/goods?id={{item.id}}">
           <image class="img" src="{{item.picUrl}}" background-size="cover"></image>
           <view class="right">
             <view class="text">
-              <text class="name jhx_f7">{{item.name}}</text>
-              <text class="desc jhx_f5">{{item.brief}}</text>
-              <text class="price jhx_f8">￥{{item.retailPrice}}</text>
+              <text class="name jhx_f7" space="emsp">编号：No{{item.goodsSn}} {{item.name}} {{item.keywords}}</text>
+              <text class="name jhx_f7" space="emsp">教授科目：{{item.shareUrl}} {{item.commpany}}</text>
+              <text class="desc jhx_f5" space='emsp'>简介：{{item.brief}}</text>
+              <text class="price jhx_f8"  space='emsp'>￥{{item.retailPrice}}/{{item.unit}}   机构推荐</text>
             </view>
           </view>
         </navigator>

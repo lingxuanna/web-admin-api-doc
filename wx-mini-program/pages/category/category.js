@@ -100,6 +100,7 @@ Page({
         size: that.data.size
       })
       .then(function(res) {
+        console.log(res.data)
         that.setData({
           goodsList: that.data.goodsList.concat(res.data.goodsList),
           totalPages: res.data.totalPages

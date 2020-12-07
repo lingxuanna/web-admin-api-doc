@@ -509,75 +509,19 @@ Page({
 
   //立即购买（先自动加入购物车）
   addFast: function() {
-    var that = this;
-    if (this.data.openAttr == false) {
-      //打开规格选择窗口
-      this.setData({
-        openAttr: !this.data.openAttr
-      });
-    } else {
-
-      //提示选择完整规格
-      if (!this.isCheckedAllSpec()) {
-        wx.showToast({
-          image: '/static/images/icon_error.png',
-          title: '请选择完整规格'
-        });
-        return false;
-      }
-
-      //根据选中的规格，判断是否有对应的sku信息
-      let checkedProductArray = this.getCheckedProductItem(this.getCheckedSpecKey());
-      if (!checkedProductArray || checkedProductArray.length <= 0) {
-        //找不到对应的product信息，提示没有库存
-        wx.showToast({
-          image: '/static/images/icon_error.png',
-          title: '没有库存'
-        });
-        return false;
-      }
-
-      let checkedProduct = checkedProductArray[0];
-      //验证库存
-      if (checkedProduct.number <= 0) {
-        wx.showToast({
-          image: '/static/images/icon_error.png',
-          title: '没有库存'
-        });
-        return false;
-      }
-
-      //验证团购是否有效
-      let checkedGroupon = this.getCheckedGrouponValue();
-
-      //立即购买
-      util.request(api.CartFastAdd, {
-          goodsId: this.data.goods.id,
-          number: this.data.number,
-          productId: checkedProduct.id
-        }, "POST")
-        .then(function(res) {
-          if (res.errno == 0) {
-
-            // 如果storage中设置了cartId，则是立即购买，否则是购物车购买
-            try {
-              wx.setStorageSync('cartId', res.data);
-              wx.setStorageSync('grouponRulesId', checkedGroupon.id);
-              wx.setStorageSync('grouponLinkId', that.data.grouponLink.id);
-              wx.navigateTo({
-                url: '/pages/checkout/checkout'
-              })
-            } catch (e) {}
-
-          } else {
-            wx.showToast({
-              image: '/static/images/icon_error.png',
-              title: res.errmsg,
-              mask: true
-            });
-          }
-        });
-    }
+    wx.showModal({
+      title: '预约学员',
+      content: '确定要预约学员吗？',
+      success: function (res) {
+        if (res.cancel) {
+          
+        } else {
+          
+        }
+     },
+     fail: function (res) { },//接口调用失败的回调函数
+     complete: function (res) { },//接口调用结束的回调函数（调用成功、失败都会执行）
+    })
 
 
   },
@@ -604,10 +548,10 @@ Page({
       //根据选中的规格，判断是否有对应的sku信息
       let checkedProductArray = this.getCheckedProductItem(this.getCheckedSpecKey());
       if (!checkedProductArray || checkedProductArray.length <= 0) {
-        //找不到对应的product信息，提示没有库存
+        //找不到对应的product信息，提示教师外出培训中，暂时没时间！
         wx.showToast({
           image: '/static/images/icon_error.png',
-          title: '没有库存'
+          title: '教师外出培训中，暂时没时间！'
         });
         return false;
       }
@@ -617,7 +561,7 @@ Page({
       if (checkedProduct.number <= 0) {
         wx.showToast({
           image: '/static/images/icon_error.png',
-          title: '没有库存'
+          title: '教师外出培训中，暂时没时间！'
         });
         return false;
       }

@@ -4,12 +4,12 @@
 
 .goodsimgs {
   width: 750rpx;
-  height: 750rpx;
+  height: 350rpx;
 }
 
 .goodsimgs image {
   width: 750rpx;
-  height: 750rpx;
+  height: 350rpx;
 }
 
 .commodity_screen {
@@ -343,7 +343,7 @@
 .goods-attr .left {
   float: left;
   font-size: 28rpx;
-  width: 134rpx;
+  width: 150rpx;
   height: 45rpx;
   line-height: 45rpx;
   overflow: hidden;

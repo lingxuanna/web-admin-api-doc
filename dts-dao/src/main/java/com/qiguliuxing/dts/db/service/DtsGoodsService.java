@@ -17,7 +17,7 @@ import java.util.List;
 @Service
 public class DtsGoodsService {
 	Column[] columns = new Column[] { Column.id, Column.name, Column.brief, Column.picUrl, Column.isHot, Column.isNew,
-			Column.counterPrice, Column.retailPrice };
+			Column.counterPrice, Column.retailPrice,Column.goodsSn,Column.categoryId,Column.shareUrl,Column.sales,Column.commpany,Column.gallery,Column.unit,Column.keywords};
 	@Resource
 	private DtsGoodsMapper goodsMapper;
 

@@ -42,7 +42,7 @@ Page({
     if (userInfo) {
       shareUserId = userInfo.userId;
     }
-    console.log('分享地址：' + '/pages/index/index?goodId=' + this.data.id + '&shareUserId=' + shareUserId);
+    // console.log('分享地址：' + '/pages/index/index?goodId=' + this.data.id + '&shareUserId=' + shareUserId);
     return {
       title: that.data.goods.name,
       desc: '好货分享',
@@ -87,7 +87,7 @@ Page({
     wx.downloadFile({
       url: that.data.shareImage,
       success: function(res) {
-        console.log(res)
+        // console.log(res)
         wx.saveImageToPhotosAlbum({
           filePath: res.tempFilePath,
           success: function(res) {
@@ -99,18 +99,18 @@ Page({
               confirmColor: '#a78845',
               success: function(res) {
                 if (res.confirm) {
-                  console.log('用户点击确定');
+                  // console.log('用户点击确定');
                 }
               }
             })
           },
           fail: function(res) {
-            console.log('fail')
+            // console.log('fail')
           }
         })
       },
       fail: function() {
-        console.log('fail')
+        // console.log('fail')
       }
     })
   },
@@ -150,9 +150,6 @@ Page({
             // 这里检测一下
             let _productPrice = res.data.productList[0].price;
             let _goodsPrice = res.data.info.retailPrice;
-            if (_productPrice != _goodsPrice) {
-              console.error('商品数量价格和货品不一致');
-            }
 
             that.setData({
               checkedSpecText: _specificationList[0].valueList[0].value,
@@ -174,7 +171,7 @@ Page({
           checkedSpecPrice: res.data.info.retailPrice,
           groupon: res.data.groupon
         });
-
+        console.log(that.data.goods)
         //如果是通过分享的团购参加团购，则团购项目应该与分享的一致并且不可更改
         if (that.data.isGroupon) {
           let groupons = that.data.groupon;
@@ -412,7 +409,7 @@ Page({
   // 获取选中的产品（根据规格）
   getCheckedProductItem: function(key) {
     return this.data.productList.filter(function(v) {
-      console.log(key.toString() + "--" + v.specifications.toString());
+        // console.log(key.toString() + "--" + v.specifications.toString());
       if (v.specifications.toString() == key.toString()) {
         return true;
       } else {
@@ -439,7 +436,7 @@ Page({
     let that = this;
     wx.getSetting({
         success: function (res) {
-            console.log(res)
+            // console.log(res)
             //不存在相册授权
             if (!res.authSetting['scope.writePhotosAlbum']) {
                 wx.authorize({
@@ -529,10 +526,10 @@ Page({
       //根据选中的规格，判断是否有对应的sku信息
       let checkedProductArray = this.getCheckedProductItem(this.getCheckedSpecKey());
       if (!checkedProductArray || checkedProductArray.length <= 0) {
-        //找不到对应的product信息，提示没有库存
+        //找不到对应的product信息，提示教师外出培训中，暂时没时间！
         wx.showToast({
           image: '/static/images/icon_error.png',
-          title: '没有库存'
+          title: '教师外出培训中，暂时没时间！'
         });
         return false;
       }
@@ -542,7 +539,7 @@ Page({
       if (checkedProduct.number <= 0) {
         wx.showToast({
           image: '/static/images/icon_error.png',
-          title: '没有库存'
+          title: '教师外出培训中，暂时没时间！'
         });
         return false;
       }
@@ -604,10 +601,10 @@ Page({
       //根据选中的规格，判断是否有对应的sku信息
       let checkedProductArray = this.getCheckedProductItem(this.getCheckedSpecKey());
       if (!checkedProductArray || checkedProductArray.length <= 0) {
-        //找不到对应的product信息，提示没有库存
+        //找不到对应的product信息，提示教师外出培训中，暂时没时间！
         wx.showToast({
           image: '/static/images/icon_error.png',
-          title: '没有库存'
+          title: '教师外出培训中，暂时没时间！'
         });
         return false;
       }
@@ -617,7 +614,7 @@ Page({
       if (checkedProduct.number <= 0) {
         wx.showToast({
           image: '/static/images/icon_error.png',
-          title: '没有库存'
+          title: '教师外出培训中，暂时没时间！'
         });
         return false;
       }

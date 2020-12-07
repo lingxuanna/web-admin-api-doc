@@ -1,11 +1,8 @@
 // 以下是业务服务器API地址
  // 本机开发API地址
-// var WxApiRoot = 'http://localhost:8070/demo/wx/';
-// var WxApiRoot = 'http://localhost:8080/wx/';
+var WxApiRoot = 'http://localhost:8070/demo/wx/';
 // 测试环境部署api地址
-var WxApiRoot = 'https://www.songmingjj.cn/demo/wx/';
-// 线上云平台api地址
-//var WxApiRoot = 'https://www.dtsshop.com/wx/';
+// var WxApiRoot = 'https://www.songmingjj.cn/demo/wx/';
 
 module.exports = {
   IndexUrl: WxApiRoot + 'home/index', //首页数据接口
